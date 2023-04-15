@@ -82,9 +82,9 @@ Clone the repository to your local machine and open the `index.html` file in you
 
 ## Live URL and Repository
 
-The live application can be accessed at the following URL: 
+The live application can be accessed at the following URL: https://aussieking.github.io/JavaScript-Quizzing/
 
-The repository can be accessed at the following URL: 
+The repository can be accessed at the following URL: https://github.com/AussieKing/JavaScript-Quizzing
 
 ## Credits
 
