@@ -6,9 +6,9 @@ var quiz = document.getElementById('quiz')
 var startButton = document.getElementById('start')
 var scores = document.getElementById('scores')
 var rightAnswers = 0 //Number of quiz questions user answers correctly
-var questionNumber = 0 //Position of current question in quizQuestions array
+var questionId = 0 //Position of current question in quizQuestions array
 
-
+// potential BUG HERE ?
 //! Step 3: Section showing number of correct questions as the quiz is going
 var correct = $("#correct");
 correct.text("Correct Answers: 0");
@@ -125,7 +125,7 @@ function startQuiz() {  // clicking the Start button will:
 //! =================  DEFINE FUNCTION FOR QUESTIONS ==========================
 function getQuestion() {
     quiz.innerHTML = "";
-    var currentQuestion = quizQuestions[questionNumber]
+    var currentQuestion = quizQuestions[questionId]
 
     //use jQuery to create an h2 element with the questions//
     var questionH2 = $('<h2>').text(currentQuestion.question);
@@ -146,11 +146,11 @@ function getQuestion() {
                 secondsLeft -= 10  //If the answer selected is wrong, take 10 seconds off the timer//
             }
         
-            questionNumber++ 
-            if (questionNumber === quizQuestions.length); //next question 
+            questionId++ 
+            if (questionId === quizQuestions.length); //next question 
 
-            //How do we knwo when the quiz is over? By matching the question number to the length of the array. If they match (ie: 7 and 7), then clear the interval and hide the question page//
-            if (questionNumber == quizQuestions.length) {
+            //How do we know when the quiz is over? By matching the question number to the length of the array. If they match (ie: 7 and 7), then clear the interval and hide the question page//
+            if (questionId == quizQuestions.length) {
                 quiz.innerHTML = "";
                 clearInterval(timer);
                 document.getElementById("hide").removeAttribute("style");
@@ -159,17 +159,14 @@ function getQuestion() {
                 quiz.innerHTML = "";
                 getQuestion();
             }
-//! UP TO HERE TO PROBLEM SOLVE 
-            // console.log(rightAnswers)
-            // rightAnswers++
-            // console.log(rightAnswers)
-        };
+            console.log(rightAnswers); //! SCORE IS LOGGING FINE BUT COUNT NOT UPDATING
+        }
     })
 }
 //! ======================= SAVE SCORES ON LOCAL STORAGE =======================
-//Function executed when Save Score button is clicked
-const submitScore = (evnt) => {
-    evnt.preventDefault(); //prevent page from refreshing on click
+//executed when Save Score button is clicked
+const submitScore = (event) => {
+    event.preventDefault(); //prevent page from refreshing on click
     var savedHighScores = JSON.parse(localStorage.getItem("HighScores")) || [];
     if (document.querySelector("input").value == "") {
         alert("Must enter letters");
