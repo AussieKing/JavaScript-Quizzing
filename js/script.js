@@ -159,7 +159,11 @@ function getQuestion() {
                 quiz.innerHTML = "";
                 getQuestion();
             }
-        }
+//! UP TO HERE TO PROBLEM SOLVE 
+            // console.log(rightAnswers)
+            // rightAnswers++
+            // console.log(rightAnswers)
+        };
     })
 }
 //! ======================= SAVE SCORES ON LOCAL STORAGE =======================
