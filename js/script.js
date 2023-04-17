@@ -127,41 +127,37 @@ function getQuestion() {
     quiz.innerHTML = "";
     var currentQuestion = quizQuestions[questionId]
 
-    //use jQuery to create an h2 element with the questions//
-    var questionH2 = $('<h2>').text(currentQuestion.question);
-    $('#quiz').append(questionH2);
-
-    //each answer becomes a button and is appended to the quiz div//
-    currentQuestion.answers.forEach((answer) => {
-        var answerEl = document.createElement("button")
-        answerEl.textContent = answer;
-        quiz.appendChild(answerEl)
+    $.each(currentQuestion.answers, function(index, answer) {
+        var answerEl = $("<button>");
+        answerEl.text(answer);
+        $("#quiz").append(answerEl);
 
 //! =================  DEFINE FUNCTION FOR ANSWERS ==========================
-        answerEl.onclick = function () {
-            if (answer === currentQuestion.correct) {  //If the answer selected is right, add 1point to the counter//
-                rightAnswers++
-                correct.textContent = "Correct Answers: " + rightAnswers + "\/7"
+        answerEl.click(function() {
+            if (answer === currentQuestion.correct) {
+                rightAnswers++;
+                $("#correct").text("Correct Answers: " + rightAnswers.toString() + "\/7");
             } else {
-                secondsLeft -= 10  //If the answer selected is wrong, take 10 seconds off the timer//
+                secondsLeft -= 10;
             }
-        
-            questionId++ 
-            if (questionId === quizQuestions.length); //next question 
-
-            //How do we know when the quiz is over? By matching the question number to the length of the array. If they match (ie: 7 and 7), then clear the interval and hide the question page//
+    
+            questionId++;
+    
+            if (questionId === quizQuestions.length);
+    
             if (questionId == quizQuestions.length) {
-                quiz.innerHTML = "";
+                $("#quiz").html("");
                 clearInterval(timer);
-                document.getElementById("hide").removeAttribute("style");
-            }
-            else {
-                quiz.innerHTML = "";
+                $("#hide").removeAttr("style");
+            } else {
+                $("#quiz").html("");
                 getQuestion();
             }
-            console.log(rightAnswers); //! SCORE IS LOGGING FINE BUT COUNT NOT UPDATING
-        }
-    })
+    
+            console.log(rightAnswers);
+            console.log($("#correct").text());
+        });
+    });
 }
 //! ======================= SAVE SCORES ON LOCAL STORAGE =======================
 //executed when Save Score button is clicked
