@@ -70,6 +70,8 @@ Clone the repository to your local machine and open the `index.html` file in you
 
 ### Correct answer recorded
 
+![Screen Shot 2023-04-17 at 8 09 31 pm](https://user-images.githubusercontent.com/126050763/232454713-53125e37-6922-461f-9e5a-6498b6a46230.png)
+
 ### Time out
 
 ![Screen Shot 2023-04-15 at 12 02 29 pm](https://user-images.githubusercontent.com/126050763/232177910-64800ad5-bb79-43f9-b25f-443b7b0139ab.png)
