@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JavaScript Quiz for Beginners pt.2</title>
+  <link rel="stylesheet" href="assets/style.css">
+  <link rel="image/png" href="assets/JavaScript-logo.png">
+</head>
+
+<body>
+  <header>
+    <h1>🌟 JavaScript Quiz 🌟</h1>
+  </header>
+
+  <main>
+    <p id="timer" style="display: none;"></p>
+    <h2><span id="correct"></span></h2>
+    <div class="form" id="quiz">
+      <button id="start">Start Quiz</button>
+    </div>
+
+    <form id="hide" style="display: none;">
+      <div>
+        <label for="initials">Enter Initials Here</label><br>
+        <input type="text" id="initials" name="initials">
+      </div>
+      <br>
+      <div>
+        <input type="submit" id="saveScoreButton" value="Save Score">
+      </div>
+    </form>
+
+    <div>
+      <h3>Current Leader Scoreboard</h3>
+      <ul id="scoreboard"></ul>
+    </div>
+  </main>
+
+  <footer>
+    <h4>© 2023 AussieKing</h4>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
+</html>
