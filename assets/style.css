@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+/* using Roboto font */
 
 * {
   margin: 0;
@@ -98,7 +99,7 @@ input[type='text'] {
   margin-top: 20px;
 }
 
-/* Remove the list-style markers from the list items */
+/* Remove the list-style markers from the list items, otherwise it renders an annoying ::marker on each <li> of the answers */
 ul {
   list-style-type: none;
   margin: 0;
@@ -111,7 +112,7 @@ ul {
   margin-bottom: 5px;
 }
 
-/* Responsive Styles for different size screens */
+/* Responsive Style */
 @media screen and (max-width: 480px) {
   .quiz-container {
     padding: 10px;
