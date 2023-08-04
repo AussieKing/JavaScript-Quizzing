@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  background: wheat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+header {
+  background-color: #007bff;
+  padding: 20px;
+  text-align: center;
+  width: 100%;
+}
+
+header h1,
+.quiz-container h1,
+#overall-timer,
+.quiz-container h2,
+.quiz-container p,
+#scoreboard li {
+  font-size: 24px;
+  font-weight: 500;
+  color: #333333;
+}
+
+header h1,
+.quiz-container h1 {
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+header h1,
+button {
+  color: #ffffff;
+}
+
+.quiz-container {
+  max-width: 600px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  margin-top: 20px;
+}
+
+button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  font-size: 18px;
+  font-weight: 500;
+  background-color: #007bff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+input[type='text'] {
+  width: 100%;
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #cccccc;
+  border-radius: 6px;
+  margin-bottom: 10px;
+}
+
+#scoreboard {
+  margin-top: 20px;
+}
+
+/* Remove the list-style markers from the list items */
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}
+
+#scoreboard li {
+  font-size: 16px;
+  color: #333333;
+  margin-bottom: 5px;
+}
+
+/* Responsive Styles for different size screens */
+@media screen and (max-width: 480px) {
+  .quiz-container {
+    padding: 10px;
+    border-radius: 8px;
+  }
+
+  h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #overall-timer {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  h2 {
+    font-size: 20px;
+    margin-bottom: 15px;
+  }
+
+  p {
+    font-size: 16px;
+    margin-bottom: 8px;
+  }
+
+  button {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+  }
+
+  input[type='text'] {
+    padding: 10px;
+    font-size: 14px;
+    margin-bottom: 8px;
+  }
+
+  #scoreboard li {
+    font-size: 14px;
+    margin-bottom: 4px;
+  }
+}
