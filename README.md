@@ -9,7 +9,7 @@ Good luck!
 - [Features](#features)
 - [Usage Guidelines](#usage-guidelines)
 - [Languages Used](#languages-used)
-- [Screenshots](#screenshots)
+- [Screenshots and Video](#screenshots-and-video)
 - [Live URL and Repository](#live-url-and-repository)
 - [Credits](#credits)
 - [License](#license)
@@ -59,27 +59,30 @@ Clone the repository to your local machine and open the `index.html` file in you
  - API
   - jQuery
 
-## Screenshots
+## Screenshots and Video
 
 ### Start Quiz screen
 
-
+![Screenshot 2023-08-04 at 2 38 45 pm](https://github.com/AussieKing/JavaScript-Quizzing/assets/126050763/3ed4ed88-6091-4670-9c84-85602398f861)
 
 ### Quiz
 
+![Screenshot 2023-08-04 at 2 40 00 pm](https://github.com/AussieKing/JavaScript-Quizzing/assets/126050763/eb38a4c6-270c-4329-b1a8-6b0e4ba97c28)
 
 
 ### Correct answer recorded
 
-
-
-### Time out
-
-
+![Screenshot 2023-08-04 at 2 40 56 pm](https://github.com/AussieKing/JavaScript-Quizzing/assets/126050763/153ffccf-e0a7-4bd1-a5fa-9ea75344150c)
 
 
 ### Scoreboard and initials
 
+![Screenshot 2023-08-04 at 2 48 45 pm](https://github.com/AussieKing/JavaScript-Quizzing/assets/126050763/23f86ea8-c075-40ae-a63f-9498978e4b72)
+
+
+### Video Walk-Through
+
+Link [here](https://drive.google.com/file/d/1o-zm-PVbpfQlXm0HY5ojrpBLjoYHaKjy/view)
 
 
 
@@ -91,7 +94,7 @@ The repository can be accessed at the following URL: https://github.com/AussieKi
 
 ## Credits
 
-- Google Fonts for the typeface - [Poppins](https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap)
+- Google Fonts API for the typeface - [Roboto](https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap)
 
 - Help from OpenAI's [ChatGPT](https://chat.openai.com/chat) for making life easier in coming up with 20 questions.
 
